@@ -1,6 +1,13 @@
 <p>
   bulle works!
 </p>
-<div *ngFor="let bulle of bulles">
-<round-progress [current]="current" [max]="100"></round-progress>
+<div *ngFor="let bulle of bulles" [@move]="state" ngClass="moveMe" (click)="moveCat()">
+<circle-progress 
+  [percent]="40" 
+  [radius]="100" 
+  [outerStrokeWidth]="16"
+  [innerStrokeWidth]="8"
+  [animation]="true"
+  [animationDuration]="300"
+  ></circle-progress>
 </div>

@@ -9,21 +9,4 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'app works from main!';
-  bulles :any = [
-       {
-       	friend1 : 'Sami'
-       },
-       {
-       	friend1 : 'Anis'
-       },
-       {
-       	friend1 : 'Marwa'
-       },
-       {
-       	friend1 : 'Aymen'
-       },
-       {
-       	friend1 : 'Souhir'
-       },
-  	];
 }
