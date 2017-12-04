@@ -1,13 +1,3 @@
-<p>
-  bulle works!
-</p>
-<div *ngFor="let bulle of bulles" [@move]="state" ngClass="moveMe" (click)="moveCat()">
-<circle-progress 
-  [percent]="40" 
-  [radius]="100" 
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [animation]="true"
-  [animationDuration]="300"
-  ></circle-progress>
+<div *ngFor="let bulle of bulles; let indexbulle = index" [attr.data-index]="indexbulle" [@move]="bulle.state" ngClass="bulle" (click)="clickbulle(indexbulle)" [style.left]="bulle.position">
+	<div ngClass="avatar"></div>
 </div>

@@ -6,9 +6,9 @@ import { Component, OnInit,animate, style, state, transition, trigger } from '@a
   styleUrls: ['./bulle.component.css'],
   animations: [
     trigger("move", [
-      state("topRight", style({left: "calc(100% - 128px)", top: 0})),
-      state("bottomLeft", style({left: 0, top: "calc(100% - 128px)"})),
-      transition("topRight <=> bottomLeft", animate( "300ms ease-in ease-out" )),
+      state("top", style({top: 0})),
+      state("bottom", style({top: "calc(100% - 128px)"})),
+      transition("top <=> bottom", animate( "300ms ease-in ease-out" )),
     ])
   ],
 })
@@ -29,19 +29,37 @@ export class BulleComponent implements OnInit {
        {
        	friend1 : 'Souhir'
        },
+       {
+         friend1 : 'Amine'
+       },
+       {
+         friend1 : 'Samir'
+       },
+       {
+         friend1 : 'Houda'
+       },
+       {
+         friend1 : 'Atef'
+       }
   	];
 
-  state = 'topRight';
   timeOutRef;
 
-  moveCat() {
-      this.state = this.state === 'topRight' ? 'bottomLeft' : 'topRight';
+  clickbulle(indexbulle) {
+      this.bulles[indexbulle].state = this.bulles[indexbulle].state === 'top' ? 'bottom' : 'top';
   }
 
   constructor() { 
   }
 
   ngOnInit() {
+    for (var i = 0; i <= this.bulles.length - 1; i+=4) {
+       for (var j = 0; (j <= 3 && i+j <= this.bulles.length -1); j++) {
+         this.bulles[j+i].position = (25 * (j+1)) + '%';
+         this.bulles[j+i].state = 'top';
+       }
+    }
+    console.log(this.bulles);
   }
 
 }
