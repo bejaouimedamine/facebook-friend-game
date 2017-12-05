@@ -8,7 +8,7 @@ import { Component, OnInit,animate, style, state, transition, trigger } from '@a
     trigger("move", [
       state("top", style({top: 0})),
       state("bottom", style({top: "calc(100% - 128px)"})),
-      transition("top <=> bottom", animate( "300ms ease-in ease-out" )),
+      transition("top => bottom", animate( "1000ms ease-in ease-out" )),
     ])
   ],
 })
@@ -40,13 +40,274 @@ export class BulleComponent implements OnInit {
        },
        {
          friend1 : 'Atef'
+       },
+       {
+         friend1 : 'Sami'
+       },
+       {
+         friend1 : 'Anis'
+       },
+       {
+         friend1 : 'Marwa'
+       },
+       {
+         friend1 : 'Aymen'
+       },
+       {
+         friend1 : 'Souhir'
+       },
+       {
+         friend1 : 'Amine'
+       },
+       {
+         friend1 : 'Samir'
+       },
+       {
+         friend1 : 'Houda'
+       },
+       {
+         friend1 : 'Atef'
+       },
+       {
+         friend1 : 'Sami'
+       },
+       {
+         friend1 : 'Anis'
+       },
+       {
+         friend1 : 'Marwa'
+       },
+       {
+         friend1 : 'Aymen'
+       },
+       {
+         friend1 : 'Souhir'
+       },
+       {
+         friend1 : 'Amine'
+       },
+       {
+         friend1 : 'Samir'
+       },
+       {
+         friend1 : 'Houda'
+       },
+       {
+         friend1 : 'Atef'
+       },
+       {
+         friend1 : 'Sami'
+       },
+       {
+         friend1 : 'Anis'
+       },
+       {
+         friend1 : 'Marwa'
+       },
+       {
+         friend1 : 'Aymen'
+       },
+       {
+         friend1 : 'Souhir'
+       },
+       {
+         friend1 : 'Amine'
+       },
+       {
+         friend1 : 'Samir'
+       },
+       {
+         friend1 : 'Houda'
+       },
+       {
+         friend1 : 'Atef'
+       },
+       {
+         friend1 : 'Sami'
+       },
+       {
+         friend1 : 'Anis'
+       },
+       {
+         friend1 : 'Marwa'
+       },
+       {
+         friend1 : 'Aymen'
+       },
+       {
+         friend1 : 'Souhir'
+       },
+       {
+         friend1 : 'Amine'
+       },
+       {
+         friend1 : 'Samir'
+       },
+       {
+         friend1 : 'Houda'
+       },
+       {
+         friend1 : 'Atef'
+       },
+       {
+         friend1 : 'Sami'
+       },
+       {
+         friend1 : 'Anis'
+       },
+       {
+         friend1 : 'Marwa'
+       },
+       {
+         friend1 : 'Aymen'
+       },
+       {
+         friend1 : 'Souhir'
+       },
+       {
+         friend1 : 'Amine'
+       },
+       {
+         friend1 : 'Samir'
+       },
+       {
+         friend1 : 'Houda'
+       },
+       {
+         friend1 : 'Atef'
+       },
+       {
+         friend1 : 'Sami'
+       },
+       {
+         friend1 : 'Anis'
+       },
+       {
+         friend1 : 'Marwa'
+       },
+       {
+         friend1 : 'Aymen'
+       },
+       {
+         friend1 : 'Souhir'
+       },
+       {
+         friend1 : 'Amine'
+       },
+       {
+         friend1 : 'Samir'
+       },
+       {
+         friend1 : 'Houda'
+       },
+       {
+         friend1 : 'Atef'
+       },
+       {
+         friend1 : 'Sami'
+       },
+       {
+         friend1 : 'Anis'
+       },
+       {
+         friend1 : 'Marwa'
+       },
+       {
+         friend1 : 'Aymen'
+       },
+       {
+         friend1 : 'Souhir'
+       },
+       {
+         friend1 : 'Amine'
+       },
+       {
+         friend1 : 'Samir'
+       },
+       {
+         friend1 : 'Houda'
+       },
+       {
+         friend1 : 'Atef'
+       },
+       {
+         friend1 : 'Sami'
+       },
+       {
+         friend1 : 'Anis'
+       },
+       {
+         friend1 : 'Marwa'
+       },
+       {
+         friend1 : 'Aymen'
+       },
+       {
+         friend1 : 'Souhir'
+       },
+       {
+         friend1 : 'Amine'
+       },
+       {
+         friend1 : 'Samir'
+       },
+       {
+         friend1 : 'Houda'
+       },
+       {
+         friend1 : 'Atef'
+       },
+       {
+         friend1 : 'Sami'
+       },
+       {
+         friend1 : 'Anis'
+       },
+       {
+         friend1 : 'Marwa'
+       },
+       {
+         friend1 : 'Aymen'
+       },
+       {
+         friend1 : 'Souhir'
+       },
+       {
+         friend1 : 'Amine'
+       },
+       {
+         friend1 : 'Samir'
+       },
+       {
+         friend1 : 'Houda'
+       },
+       {
+         friend1 : 'Atef'
        }
   	];
 
   timeOutRef;
 
   clickbulle(indexbulle) {
-      this.bulles[indexbulle].state = this.bulles[indexbulle].state === 'top' ? 'bottom' : 'top';
+    console.log(indexbulle);       
+  }
+
+  dropDownBulles(){
+        var x:number = 0;
+        var interval = setInterval(() => {  
+        
+          for (var y = x; y < x+4; y++) {
+            if (y > (this.bulles.length - 1)) {
+              x = (-4);
+            }
+            else {
+              this.bulles[y].state = 'bottom';
+            }
+          }
+
+          x+=4;
+
+        },400);
   }
 
   constructor() { 
@@ -59,7 +320,7 @@ export class BulleComponent implements OnInit {
          this.bulles[j+i].state = 'top';
        }
     }
-    console.log(this.bulles);
+    this.dropDownBulles(); 
   }
 
 }
