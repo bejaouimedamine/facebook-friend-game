@@ -13,283 +13,376 @@ import { Component, OnInit,animate, style, state, transition, trigger } from '@a
   ],
 })
 export class BulleComponent implements OnInit {
+    score :number = 0;
 	  bulles :any = [
        {
-       	friend1 : 'Sami'
+       	friend1 : 'Sami',
+         messages : 50
        },
        {
-       	friend1 : 'Anis'
+       	friend1 : 'Anis',
+         messages : 50
        },
        {
-       	friend1 : 'Marwa'
+       	friend1 : 'Marwa',
+         messages : 50
        },
        {
-       	friend1 : 'Aymen'
+       	friend1 : 'Aymen',
+         messages : 50
        },
        {
-       	friend1 : 'Souhir'
+       	friend1 : 'Souhir',
+         messages : 50
        },
        {
-         friend1 : 'Amine'
+         friend1 : 'Amine',
+         messages : 50
        },
        {
-         friend1 : 'Samir'
+         friend1 : 'Samir',
+         messages : 50
        },
        {
-         friend1 : 'Houda'
+         friend1 : 'Houda',
+         messages : 50
        },
        {
-         friend1 : 'Atef'
+         friend1 : 'Atef',
+         messages : 50
        },
        {
-         friend1 : 'Sami'
+         friend1 : 'Sami',
+         messages : 50
        },
        {
-         friend1 : 'Anis'
+         friend1 : 'Anis',
+         messages : 50
        },
        {
-         friend1 : 'Marwa'
+         friend1 : 'Marwa',
+         messages : 50
        },
        {
-         friend1 : 'Aymen'
+         friend1 : 'Aymen',
+         messages : 50
        },
        {
-         friend1 : 'Souhir'
+         friend1 : 'Souhir',
+         messages : 50
        },
        {
-         friend1 : 'Amine'
+         friend1 : 'Amine',
+         messages : 50
        },
        {
-         friend1 : 'Samir'
+         friend1 : 'Samir',
+         messages : 50
        },
        {
-         friend1 : 'Houda'
+         friend1 : 'Houda',
+         messages : 50
        },
        {
-         friend1 : 'Atef'
+         friend1 : 'Atef',
+         messages : 50
        },
        {
-         friend1 : 'Sami'
+         friend1 : 'Sami',
+         messages : 50
        },
        {
-         friend1 : 'Anis'
+         friend1 : 'Anis',
+         messages : 50
        },
        {
-         friend1 : 'Marwa'
+         friend1 : 'Marwa',
+         messages : 50
        },
        {
-         friend1 : 'Aymen'
+         friend1 : 'Aymen',
+         messages : 50
        },
        {
-         friend1 : 'Souhir'
+         friend1 : 'Souhir',
+         messages : 50
        },
        {
-         friend1 : 'Amine'
+         friend1 : 'Amine',
+         messages : 50
        },
        {
-         friend1 : 'Samir'
+         friend1 : 'Samir',
+         messages : 50
        },
        {
-         friend1 : 'Houda'
+         friend1 : 'Houda',
+         messages : 50
        },
        {
-         friend1 : 'Atef'
+         friend1 : 'Atef',
+         messages : 50
        },
        {
-         friend1 : 'Sami'
+         friend1 : 'Sami',
+         messages : 50
        },
        {
-         friend1 : 'Anis'
+         friend1 : 'Anis',
+         messages : 50
        },
        {
-         friend1 : 'Marwa'
+         friend1 : 'Marwa',
+         messages : 50
        },
        {
-         friend1 : 'Aymen'
+         friend1 : 'Aymen',
+         messages : 50
        },
        {
-         friend1 : 'Souhir'
+         friend1 : 'Souhir',
+         messages : 50
        },
        {
-         friend1 : 'Amine'
+         friend1 : 'Amine',
+         messages : 50
        },
        {
-         friend1 : 'Samir'
+         friend1 : 'Samir',
+         messages : 50
        },
        {
-         friend1 : 'Houda'
+         friend1 : 'Houda',
+         messages : 50
        },
        {
-         friend1 : 'Atef'
+         friend1 : 'Atef',
+         messages : 50
        },
        {
-         friend1 : 'Sami'
+         friend1 : 'Sami',
+         messages : 50
        },
        {
-         friend1 : 'Anis'
+         friend1 : 'Anis',
+         messages : 50
        },
        {
-         friend1 : 'Marwa'
+         friend1 : 'Marwa',
+         messages : 50
        },
        {
-         friend1 : 'Aymen'
+         friend1 : 'Aymen',
+         messages : 50
        },
        {
-         friend1 : 'Souhir'
+         friend1 : 'Souhir',
+         messages : 50
        },
        {
-         friend1 : 'Amine'
+         friend1 : 'Amine',
+         messages : 50
        },
        {
-         friend1 : 'Samir'
+         friend1 : 'Samir',
+         messages : 50
        },
        {
-         friend1 : 'Houda'
+         friend1 : 'Houda',
+         messages : 50
        },
        {
-         friend1 : 'Atef'
+         friend1 : 'Atef',
+         messages : 50
        },
        {
-         friend1 : 'Sami'
+         friend1 : 'Sami',
+         messages : 50
        },
        {
-         friend1 : 'Anis'
+         friend1 : 'Anis',
+         messages : 50
        },
        {
-         friend1 : 'Marwa'
+         friend1 : 'Marwa',
+         messages : 50
        },
        {
-         friend1 : 'Aymen'
+         friend1 : 'Aymen',
+         messages : 50
        },
        {
-         friend1 : 'Souhir'
+         friend1 : 'Souhir',
+         messages : 50
        },
        {
-         friend1 : 'Amine'
+         friend1 : 'Amine',
+         messages : 50
        },
        {
-         friend1 : 'Samir'
+         friend1 : 'Samir',
+         messages : 50
        },
        {
-         friend1 : 'Houda'
+         friend1 : 'Houda',
+         messages : 50
        },
        {
-         friend1 : 'Atef'
+         friend1 : 'Atef',
+         messages : 50
        },
        {
-         friend1 : 'Sami'
+         friend1 : 'Sami',
+         messages : 50
        },
        {
-         friend1 : 'Anis'
+         friend1 : 'Anis',
+         messages : 50
        },
        {
-         friend1 : 'Marwa'
+         friend1 : 'Marwa',
+         messages : 50
        },
        {
-         friend1 : 'Aymen'
+         friend1 : 'Aymen',
+         messages : 50
        },
        {
-         friend1 : 'Souhir'
+         friend1 : 'Souhir',
+         messages : 50
        },
        {
-         friend1 : 'Amine'
+         friend1 : 'Amine',
+         messages : 50
        },
        {
-         friend1 : 'Samir'
+         friend1 : 'Samir',
+         messages : 50
        },
        {
-         friend1 : 'Houda'
+         friend1 : 'Houda',
+         messages : 50
        },
        {
-         friend1 : 'Atef'
+         friend1 : 'Atef',
+         messages : 50
        },
        {
-         friend1 : 'Sami'
+         friend1 : 'Sami',
+         messages : 50
        },
        {
-         friend1 : 'Anis'
+         friend1 : 'Anis',
+         messages : 50
        },
        {
-         friend1 : 'Marwa'
+         friend1 : 'Marwa',
+         messages : 50
        },
        {
-         friend1 : 'Aymen'
+         friend1 : 'Aymen',
+         messages : 50
        },
        {
-         friend1 : 'Souhir'
+         friend1 : 'Souhir',
+         messages : 50
        },
        {
-         friend1 : 'Amine'
+         friend1 : 'Amine',
+         messages : 50
        },
        {
-         friend1 : 'Samir'
+         friend1 : 'Samir',
+         messages : 50
        },
        {
-         friend1 : 'Houda'
+         friend1 : 'Houda',
+         messages : 50
        },
        {
-         friend1 : 'Atef'
+         friend1 : 'Atef',
+         messages : 50
        },
        {
-         friend1 : 'Sami'
+         friend1 : 'Sami',
+         messages : 50
        },
        {
-         friend1 : 'Anis'
+         friend1 : 'Anis',
+         messages : 50
        },
        {
-         friend1 : 'Marwa'
+         friend1 : 'Marwa',
+         messages : 50
        },
        {
-         friend1 : 'Aymen'
+         friend1 : 'Aymen',
+         messages : 50
        },
        {
-         friend1 : 'Souhir'
+         friend1 : 'Souhir',
+         messages : 50
        },
        {
-         friend1 : 'Amine'
+         friend1 : 'Amine',
+         messages : 50
        },
        {
-         friend1 : 'Samir'
+         friend1 : 'Samir',
+         messages : 50
        },
        {
-         friend1 : 'Houda'
+         friend1 : 'Houda',
+         messages : 50
        },
        {
-         friend1 : 'Atef'
+         friend1 : 'Atef',
+         messages : 50
        },
        {
-         friend1 : 'Sami'
+         friend1 : 'Sami',
+         messages : 50
        },
        {
-         friend1 : 'Anis'
+         friend1 : 'Anis',
+         messages : 50
        },
        {
-         friend1 : 'Marwa'
+         friend1 : 'Marwa',
+         messages : 50
        },
        {
-         friend1 : 'Aymen'
+         friend1 : 'Aymen',
+         messages : 50
        },
        {
-         friend1 : 'Souhir'
+         friend1 : 'Souhir',
+         messages : 50
        },
        {
-         friend1 : 'Amine'
+         friend1 : 'Amine',
+         messages : 50
        },
        {
-         friend1 : 'Samir'
+         friend1 : 'Samir',
+         messages : 50
        },
        {
-         friend1 : 'Houda'
+         friend1 : 'Houda',
+         messages : 50
        },
        {
-         friend1 : 'Atef'
+         friend1 : 'Atef',
+         messages : 50
        }
   	];
 
   timeOutRef;
 
   clickbulle(indexbulle) {
-    console.log(indexbulle);       
+    console.log(this.bulles[indexbulle].messages);  
+    this.score += this.bulles[indexbulle].messages;
+    console.log(this.score);
   }
 
   dropDownBulles(){
@@ -307,7 +400,15 @@ export class BulleComponent implements OnInit {
 
           x+=4;
 
+          if (y >= this.bulles.length) {
+            this.printscore();
+            clearInterval(interval);
+          }
         },400);
+  }
+
+  printscore(){
+    console.log('ffffffff'+this.score);
   }
 
   constructor() { 
