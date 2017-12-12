@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { BulleComponent } from './bulle/bulle.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FacebookModule } from 'ngx-facebook';
 
 const appRoutes: Routes = [
   {
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    FacebookModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

@@ -1,4 +1,5 @@
 import { Component, OnInit,animate, style, state, transition, trigger } from '@angular/core';
+import { FacebookService, InitParams, LoginResponse } from 'ngx-facebook';
 
 @Component({
   selector: 'app-bulle',
@@ -377,13 +378,21 @@ export class BulleComponent implements OnInit {
        }
   	];
 
+    clickedbulle : boolean[] = [];
+
   timeOutRef;
 
   clickbulle(indexbulle) {
-    console.log(this.bulles[indexbulle].messages);  
-    this.score += this.bulles[indexbulle].messages;
-    console.log(this.score);
+    if( !this.clickedbulle[indexbulle]) {
+      this.clickedbulle[indexbulle] = true;
+      this.score += this.bulles[indexbulle].messages;
+    }
   }
+
+  onClick(event) {
+    var target = event.target || event.srcElement || event.currentTarget;
+    target.style.opacity = 0.5; 
+  }  
 
   dropDownBulles(){
         var x:number = 0;
@@ -408,20 +417,49 @@ export class BulleComponent implements OnInit {
   }
 
   printscore(){
-    console.log('ffffffff'+this.score);
+    document.getElementById("openModalButton").click();
   }
 
-  constructor() { 
+  constructor(private fb: FacebookService) {
+ 
+    let initParams: InitParams = {
+      appId: '592341600869500',
+      xfbml: true,
+      version: 'v2.8'
+    };
+ 
+    fb.init(initParams);
+ 
   }
 
   ngOnInit() {
-    for (var i = 0; i <= this.bulles.length - 1; i+=4) {
-       for (var j = 0; (j <= 3 && i+j <= this.bulles.length -1); j++) {
-         this.bulles[j+i].position = (25 * (j+1)) + '%';
-         this.bulles[j+i].state = 'top';
-       }
-    }
-    this.dropDownBulles(); 
+    this.loginWithFacebook(); 
+  }
+
+  loginWithFacebook(): void {
+ 
+    this.fb.login()
+      .then((response: LoginResponse) => {
+        console.log(response);
+        this.score = 0;
+        for(var el = 0; el < document.getElementsByClassName("avatar").length; el++ ){
+          let ele = <HTMLElement>document.getElementsByClassName("avatar")[el];
+          ele.style.opacity = "1";
+        }
+        for (var index = 0; index < this.bulles.length - 1; index++) {
+          this.clickedbulle.push(false);
+        }
+
+        for (var i = 0; i <= this.bulles.length - 1; i+=4) {
+           for (var j = 0; (j <= 3 && i+j <= this.bulles.length -1); j++) {
+             this.bulles[j+i].position = (25 * (j+1)) + '%';
+             this.bulles[j+i].state = 'top';
+           }
+        }
+        this.dropDownBulles();
+      })
+      .catch((error: any) => console.error(error));
+ 
   }
 
 }

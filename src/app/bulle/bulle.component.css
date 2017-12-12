@@ -4,6 +4,9 @@ circle-progress{
 .bulle {
       position: absolute;
       top: 0;
+      background-color: black;
+      background-size: cover;
+      border-radius: 50%;
 }
 .avatar {
     /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
@@ -22,3 +25,4 @@ circle-progress{
     /* round the edges to a circle with border radius 1/2 container size */
     border-radius: 50%;
 }
+[hidden] { display: none !important;}
