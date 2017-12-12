@@ -441,6 +441,12 @@ export class BulleComponent implements OnInit {
     this.fb.login()
       .then((response: LoginResponse) => {
         console.log(response);
+        this.fb.api('me?fields=id,name,picture')
+          .then(res => console.log(res))
+          .catch(e => console.log(e));
+        this.fb.api('/me/friendlists')
+          .then(res => console.log(res))
+          .catch(e => console.log(e));
         this.score = 0;
         for(var el = 0; el < document.getElementsByClassName("avatar").length; el++ ){
           let ele = <HTMLElement>document.getElementsByClassName("avatar")[el];
