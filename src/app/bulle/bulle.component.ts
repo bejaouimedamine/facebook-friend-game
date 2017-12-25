@@ -425,7 +425,7 @@ export class BulleComponent implements OnInit {
     let initParams: InitParams = {
       appId: '592341600869500',
       xfbml: true,
-      version: 'v2.8'
+      version: 'v2.11'
     };
  
     fb.init(initParams);
@@ -438,13 +438,20 @@ export class BulleComponent implements OnInit {
 
   loginWithFacebook(): void {
  
-    this.fb.login()
+    this.fb.login({
+      scope: 'user_friends',
+      auth_type: 'rerequest'
+    })
       .then((response: LoginResponse) => {
-        console.log(response);
-        this.fb.api('me?fields=id,name,picture')
-          .then(res => console.log(res))
+        this.fb.api('/me/taggable_friends?limit=5000&fields=id,name,picture.type(large)')
+          .then(res => {
+            for (var i=0; i < res.data.length; i++){
+              console.log(res.data[i].picture.data.url);
+              this.bulles[i].image = res.data[i].picture.data.url;
+            }
+          })
           .catch(e => console.log(e));
-        this.fb.api('/me/friendlists')
+        this.fb.api('me?fields=id,name,picture')
           .then(res => console.log(res))
           .catch(e => console.log(e));
         this.score = 0;

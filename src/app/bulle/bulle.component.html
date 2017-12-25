@@ -1,4 +1,4 @@
-<div *ngFor="let bulle of bulles; let indexbulle = index" [attr.data-index]="indexbulle" [@move]="bulle.state" ngClass="bulle" (click)="clickbulle(indexbulle)" [style.left]="bulle.position" [attr.disabled]="clickedbulle[index]">
+<div *ngFor="let bulle of bulles; let indexbulle = index" [attr.data-index]="indexbulle" [@move]="bulle.state" ngClass="bulle" (click)="clickbulle(indexbulle)" [style.left]="bulle.position" [style.background-image]="'url('+ bulle.image +')'" [attr.disabled]="clickedbulle[index]">
 	<div ngClass="avatar" (click)="onClick($event)"></div>
 </div>
 <div class="container">
