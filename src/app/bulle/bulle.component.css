@@ -2,7 +2,7 @@ circle-progress{
 	position: top 
 }
 .bulle {
-      position: absolute;
+      
       top: 0;
       background-color: black;
       background-size: cover;
@@ -11,8 +11,8 @@ circle-progress{
 .avatar {
     
     /* make a square container */
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
 
     /* fill the container, preserving aspect ratio, and cropping to fit */
     background-size: cover;

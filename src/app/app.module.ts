@@ -29,7 +29,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    BulleComponent
+    BulleComponent,
   ],
   imports: [
     BrowserModule,

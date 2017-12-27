@@ -1,5 +1,6 @@
-<div *ngFor="let bulle of bulles; let indexbulle = index" [attr.data-index]="indexbulle" [@move]="bulle.state" ngClass="bulle" (click)="clickbulle(indexbulle)" [style.left]="bulle.position" [style.background-image]="'url('+ bulle.image +')'" [attr.disabled]="clickedbulle[index]">
-	<div ngClass="avatar" (click)="onClick($event)"></div>
+<button (click)="loginWithFacebook()">click</button>
+<div *ngFor="let bulle of bulles; let indexbulle = index" [attr.data-index]="indexbulle" [@move]="bulle.state" ngClass="bulle" (click)="clickbulle(indexbulle)" [style.left]="bulle.position" [attr.disabled]="clickedbulle[index]">
+	<div ngClass="avatar" (click)="onClick($event)" [style.background-image]="'url('+ bulle.image +')'"></div>
 </div>
 <div class="container">
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="openModalButton" [hidden]="true"></button>
